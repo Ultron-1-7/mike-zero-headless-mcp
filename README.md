@@ -4,17 +4,7 @@
 
 ## 先说清楚一件事
 
-**DHI 官方并没有叫 "MIKE Zero Commander" 的组件。** 我们验证过：
-
-- 整个 `MIKE Zero 2023` 安装树里，文件名含 `commander` 的数量 = **0**
-- GitHub / npm / PyPI / Gitee / DHI 官方文档里搜 `MIKE Zero Commander` = **0 命中**
-
-> **名字大概是这么来的**：本机 `~/.workbuddy/mcp.json` 里原本就有一个 HEC-RAS 的
-> MCP —— `ras-commander-mcp 0.3.2`（底层是 `ras-commander 0.102.0`，用于自动化
-> HEC-RAS）。所以「MIKE Zero 的 Commander MCP」是**类推**出来的东西，
-> 真实世界里并不存在。本工程就是它的 MIKE Zero 对应物。
-
-MIKE Zero 真正的无界面入口是这三个（都在 `...\DHI\MIKE Zero\<年份>\bin\x64\`）：
+**DHI 官方并没有叫 "MIKE Zero Commander" 的组件。
 
 | 程序 | 作用 | 替代了 GUI 里的 |
 |---|---|---|
@@ -28,7 +18,7 @@ MIKE Zero 真正的无界面入口是这三个（都在 `...\DHI\MIKE Zero\<年�
 
 ## 安装
 
-已经装好了。如果要在别的机器上重建：
+已经装好了。如果要安装：
 
 ```bash
 # 1. 建虚拟环境（mikeio 需要 Python >= 3.12）
