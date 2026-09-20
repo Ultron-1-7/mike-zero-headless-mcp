@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# 注意：发行名（本字段）与 import 名不同 —— 模块始终是 mikezero_mcp。
+name = "mike-zero-headless-mcp"
+# 与 mikezero_mcp/__init__.py 的 __version__ 手动保持同步
+version = "1.0.1"
+description = "MCP server for headless DHI MIKE Zero automation (MzLaunch / ToolboxShell / mikeio)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "mcp>=1.2",
+]
+
+[project.optional-dependencies]
+# 读取结果用；只跑模拟不需要
+results = [
+    "mikeio>=2.0",     # dfs0/1/2/3/dfsu
+    "mikeio1d>=1.0",   # res1d / res11（MIKE 11 / 1D）
+]
+
+[project.scripts]
+mikezero-mcp = "mikezero_mcp.server:main"
+
+[tool.setuptools]
+packages = ["mikezero_mcp"]
